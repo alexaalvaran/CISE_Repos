@@ -13,7 +13,7 @@ const BookCard = ({book}: IProp) => {
     }
 
     const onClick = () => {
-        router.push('/show-book/${book._id}')
+        router.push(`/show-book/${book._id}`)
     };
 
     return(

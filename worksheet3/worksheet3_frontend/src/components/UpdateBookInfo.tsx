@@ -9,7 +9,7 @@ function UpdateBookInfo(){
     const router = useRouter();
 
     useEffect(() => {
-        fetch(process.env.NEXT_PUBLIC_BACKEND_URL + 'api/books/${id}')
+        fetch(process.env.NEXT_PUBLIC_BACKEND_URL + `api/books/${id}`)
         .then((res) => {
             return res.json();
         })

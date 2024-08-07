@@ -7,7 +7,7 @@ function ShowBookList(){
     const[books,setBooks] = useState<[Book?]>([]);
 
     useEffect(() => {
-        fetch(process.env.NEXT_PUBLIC_BACKEND_URL +'/api/books')
+        fetch(process.env.NEXT_PUBLIC_BACKEND_URL + `/api/books`)
         .then((res) => {
             return res.json();
         })
@@ -46,7 +46,7 @@ function ShowBookList(){
                     </div>
                 </div>
 
-                <div className='list'>(bookList)</div>
+                <div className='list'>{bookList}</div>
             </div>
         </div>
 
