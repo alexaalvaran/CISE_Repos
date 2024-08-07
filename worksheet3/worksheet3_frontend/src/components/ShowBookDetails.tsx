@@ -12,7 +12,7 @@ function ShowBookDetails(){
     const navigate = useRouter();
 
     useEffect(() => {
-        fetch(process.env.NEXT_PUBLIC_BACKEND_URL + '/api/books/${id}')
+        fetch(process.env.NEXT_PUBLIC_BACKEND_URL + `/api/books/${id}`)
         .then((res) => {
             return res.json()
         })
@@ -24,8 +24,8 @@ function ShowBookDetails(){
         });
     }, [id]);
 
-    const onDeleteClick = (id:string) => {
-        fetch(process.env.NEXT_PUBLIC_BACKEND_URL + '/api/books/${id}',{method:'DELETE'})
+    const onDeleteClick = (id: string) => {
+        fetch(process.env.NEXT_PUBLIC_BACKEND_URL + `/api/books/${id}`,{method:'DELETE'})
         .then((res) => {
             navigate.push('/');
         })
@@ -95,14 +95,15 @@ function ShowBookDetails(){
                         type='button'
                         className='btn btn-outline-danger btn-lg btn-block'
                         onClick={() => {
-                            onDeleteClick(book._id||"");
+                            onDeleteClick(book._id || "");
                         }}
                         >
                             Delete Book
                         </button>
                     </div>
                     <div className='col-md-6 m-auto'>
-                        <Link href={'/edit-book/${book._id}'}
+                        <Link 
+                        href={'/edit-book/${book._id}'}
                         className='btn btn-outline-info btn-lg btn-block'
                         >
                             Edit Book
