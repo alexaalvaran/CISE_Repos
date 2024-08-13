@@ -9,7 +9,7 @@ type Props = {
     dropdown?: boolean;
     onClick?: boolean| (() => void);
     style?: React.CSSProperties;
-}
+};
 
 const NavItem = ({children, route, end, dropdown,onClick, style}: Props) => {
     const router = useRouter();
@@ -25,14 +25,15 @@ const NavItem = ({children, route, end, dropdown,onClick, style}: Props) => {
     return (
         <div
         style={style}
-        className = {`$route || onClick ? styles.clickable: styles.navitem}${
-            end ? `${styles.end}`: ""
-        }${dropdown ? `{styles.dropdown}`: ""}`}
-        onClick={typeof onClick === "function" ? onClick:navigate}
+        className={`${route || onClick ? styles.clickable : styles.navitem}${
+        end ? ` ${styles.end}` : ""
+        }${dropdown ? ` ${styles.dropdown}` : ""}`}
+        onClick={typeof onClick === "function" ? onClick : navigate}
         >
-            {children}
+        {children}
         </div>
-    );
+        );
 };
+        
 
 export default NavItem;

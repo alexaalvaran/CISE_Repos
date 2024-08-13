@@ -6,7 +6,7 @@ type Props = {
 };
 
 const NavDropdown = ({children}: Props) => {
-    return <div className={styles.dropdown_container}>{children}</div>
+    return <div className={styles.dropdown_container}>{children}</div>;
 };
 
 export default NavDropdown;

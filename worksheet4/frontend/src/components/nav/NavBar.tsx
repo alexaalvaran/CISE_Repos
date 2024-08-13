@@ -6,7 +6,7 @@ type Props = {
 };
 
 const NavBar = ({children}: Props) => {
-    return <nav className={styles.navbar}>{children}</nav>
+    return <nav className={styles.navbar}>{children}</nav>;
 };
 
 export default NavBar;

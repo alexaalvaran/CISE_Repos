@@ -1,7 +1,8 @@
-import "../styles/globals.scss";
+import "../styles/gloabals.scss";
 import type {AppProps} from "next/app";
 import {SessionProvider} from "next-auth/react";
-import PopulatedNavBar from "../components/PopulatedNavBar";
+import PopulatedNavBar from "../components/table/PopulatedNavBar";
+
 
 function MyApp({Component, pageProps: {session, ...pageProps}}:AppProps){
     return(

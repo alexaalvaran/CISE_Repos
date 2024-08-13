@@ -47,7 +47,7 @@ const NewDiscussion = () => {
 
     return(
         <div className="container">
-            <h1>New Articles</h1>
+            <h1>New Article</h1>
             <form className={formStyles.form} onSubmit={submitNewArticle}>
                 <label htmlFor="title">Title:</label>
                 <input
@@ -61,7 +61,7 @@ const NewDiscussion = () => {
                 }}
                 />
 
-                <label htmlFor="author">Authors</label>
+                <label htmlFor="author">Authors:</label>
                 {authors.map((authors, index) => {
                     return(
                         <div key={`author ${index}`} className={formStyles.arrayItem}>
