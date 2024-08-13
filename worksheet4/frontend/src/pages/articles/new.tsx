@@ -32,7 +32,7 @@ const NewDiscussion = () => {
     };
 
     const removeAuthor = (index: number) => {
-        setAuthors(authors.filter((_,i) => !== index));
+        setAuthors(authors.filter((_,i) => i != index));
     };
 
     const changeAuthor = (index: number, value:string) => {
